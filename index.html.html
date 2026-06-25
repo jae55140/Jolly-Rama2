@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ClickRobot Rama 2 & English Corner Rama 2</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts (Sarabun & Montserrat) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Sarabun:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Sarabun', 'Montserrat', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .font-title {
+            font-family: 'Montserrat', 'Sarabun', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased">
+
+    <!-- Header / Navigation -->
+    <header class="fixed top-0 left-0 right-0 bg-white/90 backdrop-blur-md shadow-sm z-50 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <div class="bg-indigo-600 text-white p-2 rounded-xl shadow-md">
+                    <i class="fa-solid fa-cubes text-xl"></i>
+                </div>
+                <div>
+                    <span class="font-title font-bold text-xl tracking-tight text-indigo-900 block">Jolly school</span>
+                </div>
+            </div>
+            
+            <!-- Desktop Nav -->
+            <nav class="hidden md:flex items-center space-x-8 font-medium text-slate-600">
+                <a href="#home" class="hover:text-indigo-600 transition-colors">หน้าแรก</a>
+                <a href="#clickrobot" class="hover:text-blue-600 transition-colors">ClickRobot & หลักสูตร</a>
+                <a href="#english" class="hover:text-orange-500 transition-colors">English Corner & หลักสูตร</a>
+                <a href="#register" class="bg-indigo-600 text-white px-5 py-2.5 rounded-full hover:bg-indigo-700 shadow-md hover:shadow-lg transition-all">ลงทะเบียนเรียน</a>
+            </nav>
+
+            <!-- Mobile Nav Button -->
+            <button id="menu-btn" class="md:hidden text-slate-600 hover:text-indigo-600 focus:outline-none">
+                <i class="fa-solid fa-bars text-2xl"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-100 px-4 pt-2 pb-6 space-y-3">
+            <a href="#home" class="block py-2 px-3 rounded-lg hover:bg-slate-50 text-slate-700">หน้าแรก</a>
+            <a href="#clickrobot" class="block py-2 px-3 rounded-lg hover:bg-blue-50 text-blue-700">ClickRobot & หลักสูตร</a>
+            <a href="#english" class="block py-2 px-3 rounded-lg hover:bg-orange-50 text-orange-600">English Corner มุมภาษาอังกฤษ</a>
+            <a href="#register" class="block text-center bg-indigo-600 text-white py-2.5 rounded-lg font-medium shadow">ลงทะเบียนเรียน</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="pt-32 pb-20 text-white relative overflow-hidden bg-slate-950">
+        <!-- Background Image with Smart Fallback to high-quality default if custom image is missing -->
+        <div class="absolute inset-0 bg-cover bg-center z-0 transition-all duration-500" style="background-image: url('school.jpg');" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1920&q=80';"></div>
+        <!-- Dark Tint Overlay to ensure white text is highly readable on any user-uploaded image -->
+        <div class="absolute inset-0 bg-slate-950/75 z-0"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center max-w-3xl mx-auto">
+                <span class="inline-flex items-center gap-1.5 py-1.5 px-3 rounded-full text-xs font-semibold bg-white/10 text-indigo-300 mb-6 border border-white/10 backdrop-blur-sm">
+                    <i class="fa-solid fa-rocket animate-pulse"></i> Next-Gen STEAM Education
+                </span>
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold font-title tracking-tight mb-6 leading-tight">
+                    Where <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-400">Technology</span> Meets <span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-400">Language</span>
+                </h1>
+                <p class="text-lg sm:text-xl text-slate-300 mb-10 leading-relaxed font-light">
+                    รวมสองทักษะแห่งอนาคตไว้ในที่เดียว มุ่งเน้นการพัฒนากระบวนการคิดสร้างสรรค์ผ่านหุ่นยนต์ (ClickRobot) ควบคู่กับการสื่อสารอย่างมั่นใจด้วยมุมภาษาอังกฤษ (English Corner)
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="#clickrobot" class="inline-flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-500 text-white font-semibold px-8 py-4 rounded-xl shadow-xl transition-all hover:-translate-y-0.5">
+                        <i class="fa-solid fa-robot"></i> สำรวจหลักสูตร ClickRobot
+                    </a>
+                    <a href="#english" class="inline-flex items-center justify-center gap-2 bg-orange-500 hover:bg-orange-400 text-white font-semibold px-8 py-4 rounded-xl shadow-xl transition-all hover:-translate-y-0.5">
+                        <i class="fa-solid fa-comments"></i> สำรวจหลักสูตร English Corner
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- Wave Divider -->
+        <div class="absolute bottom-0 left-0 right-0 w-full overflow-hidden leading-[0] transform rotate-180">
+            <svg viewBox="0 0 1200 120" preserveAspectRatio="none" class="relative block w-full h-[40px] fill-slate-50">
+                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V0C26.9,4.75,55.05,10.3,84.4,14.71,154.9,25.28,231.05,33.1,321.39,56.44Z"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- ClickRobot Section (RGB Theme: แดง เขียว น้ำเงิน) -->
+    <section id="clickrobot" class="py-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
+                <!-- Content -->
+                <div class="w-full lg:w-1/2 space-y-6">
+                    <div class="inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-wider text-blue-600">
+                        <span class="w-8 h-[2px] bg-blue-600"></span> ClickRobot Automation & Coding
+                    </div>
+                    <h2 class="text-3xl sm:text-4xl font-bold font-title text-slate-900 tracking-tight leading-[1.8]">
+                        <span class="block">จุดประกายความคิดนักประดิษฐ์</span>
+                        <span class="block text-red-600 mt-2 sm:mt-3">เรียนรู้ผ่านการลงมือทำ</span>
+                    </h2>
+                    <p class="text-slate-600 leading-relaxed text-lg font-light">
+                        ห้องปฏิบัติการเทคโนโลยีและหุ่นยนต์จำลอง ที่เปิดโอกาสให้ผู้เรียนได้ทำความเข้าใจในระบบฮาร์ดแวร์ เซนเซอร์ และบอร์ดสมองกล รวมถึงฝึกฝนทักษะการเขียนโค้ดเพื่อสั่งการให้หุ่นยนต์และระบบอัตโนมัติทำงานได้อย่างแม่นยำ ผ่านรูปแบบสื่อนวัตกรรมที่เข้าใจง่ายเป็นมิตรกับผู้เรียนทุกช่วงวัย
+                    </p>
+                    
+                    <!-- Feature Items (แดง เขียว น้ำเงิน) -->
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-4">
+                        <!-- แดง -->
+                        <div class="flex items-start gap-3 p-4 bg-white border border-slate-100 rounded-xl shadow-sm">
+                            <div class="p-2 bg-red-50 text-red-600 rounded-lg"><i class="fa-solid fa-microchip animate-pulse"></i></div>
+                            <div>
+                                <h4 class="font-bold text-slate-900 text-sm">Robotics & Hardware</h4>
+                                <p class="text-[11px] text-slate-500 mt-0.5">เรียนรู้เซนเซอร์ กลไก และการต่ออุปกรณ์วงจรจริง</p>
+                            </div>
+                        </div>
+                        <!-- เขียว -->
+                        <div class="flex items-start gap-3 p-4 bg-white border border-slate-100 rounded-xl shadow-sm">
+                            <div class="p-2 bg-emerald-50 text-emerald-600 rounded-lg"><i class="fa-solid fa-code"></i></div>
+                            <div>
+                                <h4 class="font-bold text-slate-900 text-sm">Logic & Coding</h4>
+                                <p class="text-[11px] text-slate-500 mt-0.5">พัฒนาแนวคิดการเขียนโค้ดอย่างเป็นระบบตั้งแต่พื้นฐาน</p>
+                            </div>
+                        </div>
+                        <!-- น้ำเงิน -->
+                        <div class="flex items-start gap-3 p-4 bg-white border border-slate-100 rounded-xl shadow-sm">
+                            <div class="p-2 bg-blue-50 text-blue-600 rounded-lg"><i class="fa-solid fa-trophy"></i></div>
+                            <div>
+                                <h4 class="font-bold text-slate-900 text-sm">Competition Ready</h4>
+                                <p class="text-[11px] text-slate-500 mt-0.5">ฝึกฝนทักษะแก้ปัญหาขั้นสูงเพื่อต่อยอดการแข่งขันระดับประเทศ</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                               <!-- เปลี่ยนภาพโค้ด Python เป็นกล่องโชว์รูปถ่ายอุปกรณ์หลักสูตรจริงแบบคมชัด 4 ช่อง (สลับคู่สีตามสเปก แดง-เขียว-น้ำเงิน) -->
+                <div class="w-full lg:w-1/2">
+                    <div class="relative mx-auto max-w-md lg:max-w-none">
+                        <!-- Glow RGB ไล่เฉดสี แดง-เขียว-น้ำเงิน -->
+                        <div class="absolute -inset-1.5 bg-gradient-to-r from-red-500 via-emerald-500 to-blue-500 rounded-2xl blur opacity-25"></div>
+                        <div class="relative bg-white p-4 sm:p-6 rounded-2xl shadow-xl border border-slate-100">
+                            
+                            <div class="flex items-center justify-between border-b border-slate-100 pb-3 mb-4">
+                                <span class="text-sm font-bold text-slate-800 flex items-center gap-2">
+                                    <i class="fa-solid fa-robot text-blue-600 animate-pulse"></i> สื่อฝึกทักษะและหุ่นยนต์ที่ใช้ในคลาสเรียน
+                                </span>
+                                <span class="text-[10px] sm:text-xs bg-slate-100 text-slate-600 px-2.5 py-1 rounded-full font-semibold">4 อุปกรณ์หลัก</span>
+                            </div>
+
+                            <div class="grid grid-cols-2 gap-3 sm:gap-4">
+                                <!-- รูปที่ 1: Duplo Matata -->
+                                <div class="group relative aspect-square bg-slate-50 rounded-xl overflow-hidden flex items-center justify-center p-2 border border-slate-100">
+                                    <img src="class_duplo_matata.jpg" alt="Lego Duplo Matata" class="max-w-[90%] max-h-[90%] object-contain transition-transform duration-500 group-hover:scale-105" onerror="handleImgError(this, 'duplo_matata.png', 'Screenshot 2026-06-24 111933.png', 'https://placehold.co/400x400/ffe0cc/dd5500?text=Matata')">
+                                    <div class="absolute bottom-1.5 left-1.5 right-1.5 bg-slate-900/80 text-white text-[9px] sm:text-[11px] text-center py-1 rounded-md backdrop-blur-xs font-bold">
+                                        Class Duplo Matata
+                                    </div>
+                                </div>
+
+                                <!-- รูปที่ 2: Lego Essential -->
+                                <div class="group relative aspect-square bg-slate-50 rounded-xl overflow-hidden flex items-center justify-center p-2 border border-slate-100">
+                                    <img src="class_essential.jpg" alt="Lego Essential" class="max-w-[90%] max-h-[90%] object-contain transition-transform duration-500 group-hover:scale-105" onerror="handleImgError(this, 'lego_essential.png', 'Screenshot 2026-06-24 111947.png', 'https://placehold.co/400x400/e0f2fe/0284c7?text=Essential')">
+                                    <div class="absolute bottom-1.5 left-1.5 right-1.5 bg-slate-900/80 text-white text-[9px] sm:text-[11px] text-center py-1 rounded-md backdrop-blur-xs font-bold">
+                                        Class Essential
+                                    </div>
+                                </div>
+
+                                <!-- รูปที่ 3: Lego Spike Prime -->
+                                <div class="group relative aspect-square bg-slate-50 rounded-xl overflow-hidden flex items-center justify-center p-2 border border-slate-100">
+                                    <img src="class_spikeprime.jpg" alt="Lego Spike Prime" class="max-w-[90%] max-h-[90%] object-contain transition-transform duration-500 group-hover:scale-105" onerror="handleImgError(this, 'spike_prime.png', 'Screenshot 2026-06-24 111956.png', 'https://placehold.co/400x400/e0e7ff/4f46e5?text=Spike+Prime')">
+                                    <div class="absolute bottom-1.5 left-1.5 right-1.5 bg-slate-900/80 text-white text-[9px] sm:text-[11px] text-center py-1 rounded-md backdrop-blur-xs font-bold">
+                                        Class Spike Prime
+                                    </div>
+                                </div>
+
+                                <!-- รูปที่ 4: VEX IQ -->
+                                <div class="group relative aspect-square bg-slate-50 rounded-xl overflow-hidden flex items-center justify-center p-2 border border-slate-100">
+                                    <img src="class_vex_iq.jpg" alt="VEX IQ Robotics" class="max-w-[90%] max-h-full object-contain transition-transform duration-500 group-hover:scale-105" onerror="handleImgError(this, 'vex_iq.png', 'Screenshot 2026-06-24 112005.png', 'https://placehold.co/600x400/fee2e2/dc2626?text=VEX+IQ+Robotics')">
+                                    <div class="absolute bottom-1.5 left-1.5 right-1.5 bg-slate-900/80 text-white text-[9px] sm:text-[11px] text-center py-1 rounded-md backdrop-blur-xs font-bold">
+                                        Class Vex IQ
+                                </div>
+                            </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Curriculum Section (หลักสูตรตามช่วงวัย) -->
+            <div class="mt-24 border-t border-slate-100 pt-16">
+                <div class="text-center max-w-2xl mx-auto mb-12">
+                    <span class="text-xs font-bold text-blue-600 uppercase tracking-widest bg-blue-50 px-3.5 py-1.5 rounded-full">Our Core Curriculum</span>
+                    <h3 class="text-3xl font-bold font-title text-slate-900 mt-3 tracking-tight">หลักสูตรเทคโนโลยี & หุ่นยนต์ ตามช่วงวัย</h3>
+                    <p class="text-slate-500 font-light mt-2 text-sm sm:text-base">เราออกแบบเนื้อหาการเรียนรู้อย่างเป็นขั้นตอน เพื่อให้เหมาะสมกับการเรียนรู้และพัฒนาการสมองของเด็กในแต่ละระดับชั้น</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    
+                    <!-- Lego Duplo Matata (อนุบาล 1) -->
+                    <!-- อัปเดตเพื่อแสดงรูป Tale-bot (duplo_matata.png) -->
+                    <div class="bg-white border border-slate-100 rounded-2xl shadow-sm hover:shadow-md transition-all flex flex-col justify-between group overflow-hidden">
+                        <div>
+                            <div class="h-48 overflow-hidden bg-slate-100 relative">
+                                <img src="duplo_matata.PNG.png" alt="Lego Duplo Matata (Tale-Bot)" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" onerror="this.onerror=null; this.src='https://placehold.co/600x400/ffe0cc/dd5500?text=Lego+Duplo+Matata'">
+                            </div>
+                            <div class="p-6 space-y-4">
+                                <div class="flex items-center justify-between">
+                                    <span class="bg-red-50 text-red-600 text-xs font-bold px-3 py-1 rounded-full"><i class="fa-solid fa-baby mr-1"></i> อนุบาล 1</span>
+                                    <div class="w-10 h-10 rounded-xl bg-red-50 text-red-500 flex items-center justify-center text-lg"><i class="fa-solid fa-shapes"></i></div>
+                                </div>
+                                <h4 class="text-lg font-bold text-slate-900 font-title group-hover:text-blue-600 transition-colors">Lego Duplo Matata</h4>
+                                <p class="text-xs text-slate-600 leading-relaxed font-light">
+                                    สัมผัสแรกกับความสนุกสนาน ปูพื้นฐานการคิดเชิงคำนวณ ตรรกะเหตุและผลเบื้องต้นผ่านตัวต่อขนาดใหญ่สีสันสดใสและการสั่งงานแบบไร้หน้าจอ (Screenless Coding) ที่ปลอดภัยและกระตุ้นการเรียนรู้ได้ดีที่สุด
+                                </p>
+                            </div>
+                        </div>
+                        <div class="p-6 pt-0">
+                            <div class="pt-6 border-t border-slate-100 flex items-center justify-between text-xs font-medium text-slate-400">
+                                <span><i class="fa-regular fa-clock mr-1"></i> เริ่มต้นพื้นฐานการคิด</span>
+                                <span class="text-red-500">K1 Only</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Lego Essential (อนุบาล 2-3) -->
+                    <!-- อัปเดตเพื่อแสดงรูปกลไกฟิสิกส์ม้าหมุนกังหัน (lego_essential.png) -->
+                    <div class="bg-white border border-slate-100 rounded-2xl shadow-sm hover:shadow-md transition-all flex flex-col justify-between group overflow-hidden">
+                        <div>
+                            <div class="grid grid-cols-2 h-48 overflow-hidden bg-slate-900 relative gap-0.5 p-0.5">
+                                <div class="h-full overflow-hidden relative">
+                                    <img src="lego_essential.PNG.jpg" alt="Lego Spike Prime Mechanical Windmill" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1515879218367-8466d910aaa4?auto=format&fit=crop&w=300&q=80'">
+                                </div>
+                                <div class="h-full overflow-hidden relative">
+                                    <img src="code essential.png.png" alt="Python programming on LEGO Education flyer" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" onerror="this.onerror=null; this.src='https://placehold.co/300x400/d1fae5/059669?text=Python+Code'">
+                                </div>
+                            </div>
+                            <div class="p-6 space-y-4">
+                                <div class="flex items-center justify-between">
+                                    <span class="bg-emerald-50 text-emerald-600 text-xs font-bold px-3 py-1 rounded-full"><i class="fa-brands fa-python mr-1"></i> เด็กอายุ 9 ปีขึ้นไป</span>
+                                    <div class="w-10 h-10 rounded-xl bg-emerald-50 text-emerald-500 flex items-center justify-center text-lg"><i class="fa-solid fa-terminal"></i></div>
+                                </div>
+                                <h4 class="text-lg font-bold text-slate-900 font-title group-hover:text-emerald-600 transition-colors">Lego Essential</h4>
+                                <p class="text-xs text-slate-600 leading-relaxed font-light">
+                                    สนุกสนานกับการเรียนรู้วิทยาศาสตร์กายภาพผ่านการออกแบบกลไกจำลองรอบตัว ฝึกทักษะการแก้ปัญหาและก้าวแรกสู่การโค้ดดิ้งหุ่นยนต์ด้วยสัญลักษณ์ภาพที่เข้าใจง่าย สนุกทุกชั่วโมงเรียน
+                                </p>
+                            </div>
+                        </div>
+                        <div class="p-6 pt-0">
+                            <div class="pt-6 border-t border-slate-100 flex items-center justify-between text-xs font-medium text-slate-400">
+                                <span><i class="fa-regular fa-clock mr-1"></i> สื่อการสอนแบบกลไก</span>
+                                <span class="text-emerald-500">K2 - K3</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Lego Spike Prime (ประถมศึกษาปีที่ 1-3) -->
+                    <!-- อัปเดตเพื่อแสดงรูปโมเดลหุ่นยนต์ล้อสายพานสมองกล (spike_prime.png) -->
+                    <div class="bg-white border border-slate-100 rounded-2xl shadow-sm hover:shadow-md transition-all flex flex-col justify-between group overflow-hidden">
+                        <div>
+                            <div class="grid grid-cols-2 h-48 overflow-hidden bg-slate-900 relative gap-0.5 p-0.5">
+                                <div class="h-full overflow-hidden relative">
+                                    <img src="spike_prime.PNG.png" alt="Lego Spike Prime Mechanical Windmill" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1515879218367-8466d910aaa4?auto=format&fit=crop&w=300&q=80'">
+                                </div>
+                                <div class="h-full overflow-hidden relative">
+                                    <img src="code_spikeprime.png.png" alt="Python programming on LEGO Education flyer" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" onerror="this.onerror=null; this.src='https://placehold.co/300x400/d1fae5/059669?text=Python+Code'">
+                                </div>
+                            </div>
+                            <div class="p-6 space-y-4">
+                                <div class="flex items-center justify-between">
+                                    <span class="bg-emerald-50 text-emerald-600 text-xs font-bold px-3 py-1 rounded-full"><i class="fa-brands fa-python mr-1"></i> เด็กอายุ 9 ปีขึ้นไป</span>
+                                    <div class="w-10 h-10 rounded-xl bg-emerald-50 text-emerald-500 flex items-center justify-center text-lg"><i class="fa-solid fa-terminal"></i></div>
+                                </div>
+                                <h4 class="text-lg font-bold text-slate-900 font-title group-hover:text-blue-600 transition-colors">Lego Spike Prime</h4>
+                                <p class="text-xs text-slate-600 leading-relaxed font-light">
+                                    พัฒนาสู่การเขียนโปรแกรมเชิงโครงสร้างในรูปแบบบล็อกคำสั่ง (Word Blocks) เรียนรู้การทำงานของเซนเซอร์ระดับสูง มอเตอร์ และกลไกขับเคลื่อนที่แม่นยำ เพื่อวิเคราะห์และแก้ไขโจทย์จำลองที่ท้าทาย
+                                </p>
+                            </div>
+                        </div>
+                        <div class="p-6 pt-0">
+                            <div class="pt-6 border-t border-slate-100 flex items-center justify-between text-xs font-medium text-slate-400">
+                                <span><i class="fa-regular fa-clock mr-1"></i> เขียนโปรแกรมบล็อก</span>
+                                <span class="text-blue-500">Grade 1 - 3</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Python with Spike Prime (อายุ 9 ปีขึ้นไป) -->
+                    <!-- โครงสร้างรูปภาพ 2 คอลัมน์ ดึงรูปกังหันลม (S__7053315_0.jpg) และโค้ดภาษา Python (S__7053316_0.jpg) ค้างไว้ตามเดิมตามรีเควสก่อนหน้า -->
+                    <div class="bg-white border border-slate-100 rounded-2xl shadow-sm hover:shadow-md transition-all flex flex-col justify-between group overflow-hidden">
+                        <div>
+                            <div class="grid grid-cols-2 h-48 overflow-hidden bg-slate-900 relative gap-0.5 p-0.5">
+                                <div class="h-full overflow-hidden relative">
+                                    <img src="python_windmill.JPG.jpg" alt="Lego Spike Prime Mechanical Windmill" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1515879218367-8466d910aaa4?auto=format&fit=crop&w=300&q=80'">
+                                </div>
+                                <div class="h-full overflow-hidden relative">
+                                    <img src="python_code.JPG.jpg" alt="Python programming on LEGO Education flyer" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" onerror="this.onerror=null; this.src='https://placehold.co/300x400/d1fae5/059669?text=Python+Code'">
+                                </div>
+                            </div>
+                            <div class="p-6 space-y-4">
+                                <div class="flex items-center justify-between">
+                                    <span class="bg-emerald-50 text-emerald-600 text-xs font-bold px-3 py-1 rounded-full"><i class="fa-brands fa-python mr-1"></i> เด็กอายุ 9 ปีขึ้นไป</span>
+                                    <div class="w-10 h-10 rounded-xl bg-emerald-50 text-emerald-500 flex items-center justify-center text-lg"><i class="fa-solid fa-terminal"></i></div>
+                                </div>
+                                <h4 class="text-lg font-bold text-slate-900 font-title group-hover:text-emerald-600 transition-colors">Python with Spike Prime</h4>
+                                <p class="text-xs text-slate-600 leading-relaxed font-light">
+                                    ก้าวผ่านกรอบของบล็อกแบบลากวางไปสู่ภาษาโปรแกรมมิ่งอันดับหนึ่งอย่าง "Python" เรียนรู้การเขียนโค้ดบรรทัดจริงเพื่อควบคุมกลไก คาดการณ์เซนเซอร์ และพัฒนาวิธีแก้ปัญหาแบบนักพัฒนามืออาชีพ
+                                </p>
+                            </div>
+                        </div>
+                        <div class="p-6 pt-0">
+                            <div class="pt-6 border-t border-slate-100 flex items-center justify-between text-xs font-medium text-slate-400">
+                                <span><i class="fa-regular fa-clock mr-1"></i> เขียนโค้ดภาษาจริง (Text)</span>
+                                <span class="text-emerald-500">Ages 9+</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- VEX IQ (อายุ 9 ปีขึ้นไป) -->
+                    <!-- อัปเดตเพื่อแสดงรูปหุ่นยนต์ VEX IQ แบบเหล็กและคานจับ (vex_iq.png) -->
+                    <div class="bg-white border border-slate-100 rounded-2xl shadow-sm hover:shadow-md transition-all flex flex-col justify-between group overflow-hidden">
+                        <div>
+                            <div class="grid grid-cols-2 h-48 overflow-hidden bg-slate-900 relative gap-0.5 p-0.5">
+                                <div class="h-full overflow-hidden relative">
+                                    <img src="vex_iq.PNG.png" alt="Lego Spike Prime Mechanical Windmill" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1515879218367-8466d910aaa4?auto=format&fit=crop&w=300&q=80'">
+                                </div>
+                                <div class="h-full overflow-hidden relative">
+                                    <img src="vex_code.png.png" alt="Python programming on LEGO Education flyer" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" onerror="this.onerror=null; this.src='https://placehold.co/300x400/d1fae5/059669?text=Python+Code'">
+                                </div>
+                            </div>
+                            <div class="p-6 space-y-4">
+                                <div class="flex items-center justify-between">
+                                    <span class="bg-emerald-50 text-emerald-600 text-xs font-bold px-3 py-1 rounded-full"><i class="fa-brands fa-python mr-1"></i> เด็กอายุ 9 ปีขึ้นไป</span>
+                                    <div class="w-10 h-10 rounded-xl bg-emerald-50 text-emerald-500 flex items-center justify-center text-lg"><i class="fa-solid fa-terminal"></i></div>
+                                </div>
+                                <h4 class="text-lg font-bold text-slate-900 font-title group-hover:text-blue-600 transition-colors">VEX IQ Robotics</h4>
+                                <p class="text-xs text-slate-600 leading-relaxed font-light">
+                                    ตื่นตาตื่นใจกับการสร้างหุ่นยนต์โครงสร้างอุตสาหกรรม เรียนรู้ระบบเกียร์ อัตราทด กำลังส่ง และฟิสิกส์เชิงกลไก มุ่งเน้นการแก้โจทย์การแข่งขันระดับเวิลด์คลาสและพัฒนาทักษะการทำงานเป็นทีมแบบวิศวกรตัวจริง
+                                </p>
+                            </div>
+                        </div>
+                        <div class="p-6 pt-0">
+                            <div class="pt-6 border-t border-slate-100 flex items-center justify-between text-xs font-medium text-slate-400">
+                                <span><i class="fa-regular fa-clock mr-1"></i> กลศาสตร์ & การแข่งขัน</span>
+                                <span class="text-red-500">Ages 9+ / Competition</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Coming Soon / Next Level -->
+                    <div class="bg-gradient-to-br from-blue-50/50 to-slate-50 border border-dashed border-blue-200 p-6 rounded-2xl shadow-sm flex flex-col justify-between items-center text-center">
+                        <div class="my-auto space-y-3">
+                            <div class="w-12 h-12 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center text-xl mx-auto"><i class="fa-solid fa-lightbulb animate-bounce"></i></div>
+                            <h4 class="text-md font-bold text-slate-900 font-title">คอร์สอื่น ๆ เพิ่มเติมเร็ว ๆ นี้</h4>
+                            <p class="text-xs text-slate-500 leading-relaxed">กำลังมองหาหลักสูตรจำลองเฉพาะทางหรือการเตรียมตัวแข่งขันโอลิมปิกวิชาการอยู่ใช่หรือไม่? สอบถามคุณครูได้เลย!</p>
+                            <a href="#register" class="inline-block text-xs text-blue-600 font-semibold hover:underline">สอบถามข้อมูลคอร์สเพิ่มเติม &rarr;</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- English Corner Section (Orange & Green Theme: ส้ม เขียว) -->
+    <section id="english" class="py-24 bg-gradient-to-b from-orange-50/40 via-white to-emerald-50/40 border-y border-orange-100/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col lg:flex-row-reverse items-center gap-12 lg:gap-16">
+                <!-- Content -->
+                <div class="w-full lg:w-1/2 space-y-6">
+                    <div class="inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-wider text-orange-600">
+                        <span class="w-8 h-[2px] bg-orange-500"></span> English Corner Creative Space
+                    </div>
+                    <!-- หัวข้อเวอร์ชันปรับปรุงเพื่อป้องกันสระไทยทับซ้อนกัน พร้อมโทนเขียวและส้ม -->
+                    <h2 class="text-3xl sm:text-4xl font-bold font-title text-slate-900 tracking-tight leading-[1.8]">
+                        <span class="block text-orange-500">เปิดประตูสู่สากลด้วย</span>
+                        <span class="block text-emerald-600 mt-2 sm:mt-3">ความมั่นใจในการสื่อสาร</span>
+                    </h2>
+                    <p class="text-slate-600 leading-relaxed text-lg font-light">
+                        เปลี่ยนการเรียนภาษาอังกฤษให้เป็นเรื่องสนุกในบรรยากาศที่เป็นกันเอง เน้นการฝึกฝนทักษะการฟังและการพูดผ่านสถานการณ์จำลอง เกม และการอภิปรายกลุ่ม (Discussion) เพื่อให้ผู้เรียนกล้าแสดงออกและใช้งานได้จริงในชีวิตประจำวัน
+                    </p>
+
+                    <!-- Quote Block (ส้ม) -->
+                    <div class="p-5 bg-white border-l-4 border-orange-500 rounded-r-xl shadow-sm">
+                        <p class="italic text-slate-600 font-light">"Language is not just a subject, it is a tool to connect with the global tech world."</p>
+                    </div>
+
+                    <!-- Highlight Grid (สลับ ส้ม - เขียว) -->
+                    <div class="grid grid-cols-3 gap-4 text-center pt-2">
+                        <div class="bg-white p-4 rounded-xl border border-slate-100 shadow-sm">
+                            <div class="text-2xl font-bold text-orange-500 font-title">100%</div>
+                            <div class="text-xs text-slate-500 mt-1">Interactive</div>
+                        </div>
+                        <div class="bg-white p-4 rounded-xl border border-slate-100 shadow-sm">
+                            <div class="text-2xl font-bold text-emerald-600 font-title">Fun</div>
+                            <div class="text-xs text-slate-500 mt-1">Activities</div>
+                        </div>
+                        <div class="bg-white p-4 rounded-xl border border-slate-100 shadow-sm">
+                            <div class="text-2xl font-bold text-orange-500 font-title">Tech</div>
+                            <div class="text-xs text-slate-500 mt-1">Vocabulary</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Interactive Mini Game/UI (ส้ม เขียว) -->
+                <div class="w-full lg:w-1/2">
+                    <div class="bg-white p-6 sm:p-8 rounded-2xl shadow-xl border border-orange-100 max-w-md mx-auto lg:max-w-none">
+                        <h3 class="text-lg font-bold text-slate-900 mb-4 flex items-center gap-2">
+                            <i class="fa-solid fa-comment-dots text-emerald-600 animate-bounce"></i> English Corner Mini Challenge!
+                        </h3>
+                        <p class="text-sm text-slate-600 mb-6">ทายซิว่าคำศัพท์ข้อใดเกี่ยวข้องกับคำว่า <strong class="text-orange-500">"Robot"</strong> มากที่สุด?</p>
+                        
+                        <div class="space-y-3" id="quiz-options">
+                            <!-- ข้อผิด: แสดงสีส้มและกากบาทแทนสีแดงเดิมเพื่อคุมธีม -->
+                            <button onclick="checkAnswer(false, this)" class="w-full text-left p-4 rounded-xl border border-slate-200 hover:border-emerald-500 hover:bg-emerald-50/30 transition-all font-medium text-slate-700 flex items-center justify-between group">
+                                <span>A) Ingredient (วัตถุดิบ)</span>
+                                <i class="fa-regular fa-circle text-slate-300 group-hover:text-emerald-500"></i>
+                            </button>
+                            <!-- ข้อถูก: แสดงสีเขียว -->
+                            <button onclick="checkAnswer(true, this)" class="w-full text-left p-4 rounded-xl border border-slate-200 hover:border-emerald-500 hover:bg-emerald-50/30 transition-all font-medium text-slate-700 flex items-center justify-between group">
+                                <span>B) Autonomous (อัตโนมัติ)</span>
+                                <i class="fa-regular fa-circle text-slate-300 group-hover:text-emerald-500"></i>
+                            </button>
+                            <button onclick="checkAnswer(false, this)" class="w-full text-left p-4 rounded-xl border border-slate-200 hover:border-emerald-500 hover:bg-emerald-50/30 transition-all font-medium text-slate-700 flex items-center justify-between group">
+                                <span>C) Literature (วรรณกรรม)</span>
+                                <i class="fa-regular fa-circle text-slate-300 group-hover:text-emerald-500"></i>
+                            </button>
+                        </div>
+                        <div id="quiz-result" class="mt-4 text-center text-sm font-semibold hidden"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- English Corner Curriculum Section (หลักสูตรภาษาอังกฤษสร้างสรรค์) -->
+            <div class="mt-24 border-t border-orange-100 pt-16">
+                <div class="text-center max-w-2xl mx-auto mb-12">
+                    <span class="text-xs font-bold text-emerald-600 uppercase tracking-widest bg-emerald-50 px-3.5 py-1.5 rounded-full">English Corner Curriculum</span>
+                    <h3 class="text-3xl font-bold font-title text-slate-900 mt-3 tracking-tight leading-[1.8]">หลักสูตรพัฒนาทักษะภาษาแบบสร้างสรรค์</h3>
+                    <p class="text-slate-500 font-light mt-2 text-sm sm:text-base">เรียนรู้ภาษาอังกฤษอย่างเป็นธรรมชาติและมั่นใจ ผ่านกิจกรรม Active Learning ที่ดึงความสนใจของเด็ก ๆ ในแต่ละช่วงวัย</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    
+                    <!-- English (ภาษาอังกฤษเพื่อการสื่อสาร) -->
+                    <div class="bg-white border border-orange-100/70 rounded-2xl shadow-sm hover:shadow-md transition-all flex flex-col justify-between group overflow-hidden">
+                        <div>
+                            <div class="h-40 overflow-hidden bg-slate-100 relative">
+                                <img src="https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&w=600&q=80" alt="Creative English" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" onerror="this.onerror=null; this.src='https://placehold.co/600x400/ffedd5/ea580c?text=Creative+English'">
+                            </div>
+                            <div class="p-6 space-y-4">
+                                <div class="flex items-center justify-between">
+                                    <span class="bg-orange-50 text-orange-600 text-xs font-bold px-3 py-1 rounded-full"><i class="fa-solid fa-comments mr-1"></i> English Communication</span>
+                                    <div class="w-10 h-10 rounded-xl bg-orange-50 text-orange-500 flex items-center justify-center text-lg"><i class="fa-solid fa-book-open"></i></div>
+                                </div>
+                                <h4 class="text-lg font-bold text-slate-900 font-title group-hover:text-orange-500 transition-colors">Creative English</h4>
+                                <p class="text-xs text-slate-600 leading-relaxed font-light">
+                                    เน้นทักษะการฟังและพูดผ่านบทสนทนาที่ใช้จริงในชีวิตประจำวัน ช่วยทลายกำแพงความกลัวในการพูดภาษาอังกฤษ ให้เด็ก ๆ มีความมั่นใจและสื่อสารได้อย่างเป็นธรรมชาติ
+                                </p>
+                            </div>
+                        </div>
+                        <div class="p-6 pt-0">
+                            <div class="pt-6 border-t border-slate-100 flex items-center justify-between text-xs font-medium text-slate-400">
+                                <span><i class="fa-solid fa-graduation-cap mr-1"></i> เน้นฟัง-พูด-สื่อสาร</span>
+                                <span class="text-orange-500">Every Age</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Phonics (การออกเสียงและสะกดคำ) -->
+                    <div class="bg-white border border-emerald-100/70 rounded-2xl shadow-sm hover:shadow-md transition-all flex flex-col justify-between group overflow-hidden">
+                        <div>
+                            <div class="h-40 overflow-hidden bg-slate-100 relative">
+                                <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=600&q=80" alt="Phonics Master" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" onerror="this.onerror=null; this.src='https://placehold.co/600x400/d1fae5/059669?text=Phonics+Master'">
+                            </div>
+                            <div class="p-6 space-y-4">
+                                <div class="flex items-center justify-between">
+                                    <span class="bg-emerald-50 text-emerald-600 text-xs font-bold px-3 py-1 rounded-full"><i class="fa-solid fa-music mr-1"></i> Sound & Spelling</span>
+                                    <div class="w-10 h-10 rounded-xl bg-emerald-50 text-emerald-500 flex items-center justify-center text-lg"><i class="fa-solid fa-volume-high"></i></div>
+                                </div>
+                                <h4 class="text-lg font-bold text-slate-900 font-title group-hover:text-emerald-600 transition-colors">Phonics Master</h4>
+                                <p class="text-xs text-slate-600 leading-relaxed font-light">
+                                    ปูพื้นฐานการอ่านและสะกดคำด้วยวิธีผสมเสียง (Phonics) ช่วยให้เด็ก ๆ สามารถสะกดและอ่านออกเสียงคำศัพท์ใหม่ ๆ ได้อย่างถูกต้องตั้งแต่คำแรก พร้อมสำเนียงเป๊ะแบบเจ้าของภาษา
+                                </p>
+                            </div>
+                        </div>
+                        <div class="p-6 pt-0">
+                            <div class="pt-6 border-t border-slate-100 flex items-center justify-between text-xs font-medium text-slate-400">
+                                <span><i class="fa-solid fa-music mr-1"></i> ผสมเสียงและออกเสียง</span>
+                                <span class="text-emerald-500">Age 4-8</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Math (คณิตศาสตร์ภาษาอังกฤษ) -->
+                    <div class="bg-white border border-orange-100/70 rounded-2xl shadow-sm hover:shadow-md transition-all flex flex-col justify-between group overflow-hidden">
+                        <div>
+                            <div class="h-40 overflow-hidden bg-slate-100 relative">
+                                <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=600&q=80" alt="Smart Math" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" onerror="this.onerror=null; this.src='https://placehold.co/600x400/ffedd5/ea580c?text=Smart+Math'">
+                            </div>
+                            <div class="p-6 space-y-4">
+                                <div class="flex items-center justify-between">
+                                    <span class="bg-orange-50 text-orange-600 text-xs font-bold px-3 py-1 rounded-full"><i class="fa-solid fa-calculator mr-1"></i> English & Math</span>
+                                    <div class="w-10 h-10 rounded-xl bg-orange-50 text-orange-500 flex items-center justify-center text-lg"><i class="fa-solid fa-plus-minus"></i></div>
+                                </div>
+                                <h4 class="text-lg font-bold text-slate-900 font-title group-hover:text-orange-500 transition-colors">Smart Math</h4>
+                                <p class="text-xs text-slate-600 leading-relaxed font-light">
+                                    บูรณาการตรรกะคณิตศาสตร์เข้ากับทักษะภาษาอังกฤษ สนุกสนานกับการเรียนรู้วิธีนับเลข รูปร่าง และแก้โจทย์เลขเป็นภาษาอังกฤษอย่างง่าย ปูพื้นฐานสู่หลักสูตรนานาชาติ
+                                </p>
+                            </div>
+                        </div>
+                        <div class="p-6 pt-0">
+                            <div class="pt-6 border-t border-slate-100 flex items-center justify-between text-xs font-medium text-slate-400">
+                                <span><i class="fa-solid fa-lightbulb mr-1"></i> คณิตสองภาษา (Bilingual)</span>
+                                <span class="text-orange-500">Age 6+</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Art (ศิลปะสร้างสรรค์ภาษาอังกฤษ) -->
+                    <div class="bg-white border border-emerald-100/70 rounded-2xl shadow-sm hover:shadow-md transition-all flex flex-col justify-between group overflow-hidden">
+                        <div>
+                            <div class="h-40 overflow-hidden bg-slate-100 relative">
+                                <img src="https://images.unsplash.com/photo-1513364776144-60967b0f800f?auto=format&fit=crop&w=600&q=80" alt="Creative Art" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" onerror="this.onerror=null; this.src='https://placehold.co/600x400/d1fae5/059669?text=Creative+Art'">
+                            </div>
+                            <div class="p-6 space-y-4">
+                                <div class="flex items-center justify-between">
+                                    <span class="bg-emerald-50 text-emerald-600 text-xs font-bold px-3 py-1 rounded-full"><i class="fa-solid fa-palette mr-1"></i> Creative Hands-on</span>
+                                    <div class="w-10 h-10 rounded-xl bg-emerald-50 text-emerald-500 flex items-center justify-center text-lg"><i class="fa-solid fa-paint-brush"></i></div>
+                                </div>
+                                <h4 class="text-lg font-bold text-slate-900 font-title group-hover:text-emerald-600 transition-colors">Creative Art</h4>
+                                <p class="text-xs text-slate-600 leading-relaxed font-light">
+                                    พัฒนากล้ามเนื้อมัดเล็กและสมองซีกขวาผ่านงานศิลปะ งานปั้น และงานประดิษฐ์ พร้อมซึมซับคำศัพท์ภาษาอังกฤษและประโยคคำสั่งผ่านการลงมือทำกิจกรรมแสนสนุกในห้องเรียน
+                                </p>
+                            </div>
+                        </div>
+                        <div class="p-6 pt-0">
+                            <div class="pt-6 border-t border-slate-100 flex items-center justify-between text-xs font-medium text-slate-400">
+                                <span><i class="fa-solid fa-hand-holding-heart mr-1"></i> ศิลปะ & งานประดิษฐ์</span>
+                                <span class="text-emerald-500">Every Age</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Registration & Contact -->
+    <section id="register" class="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="bg-gradient-to-br from-indigo-900 to-slate-900 rounded-3xl shadow-2xl overflow-hidden relative">
+            <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=1200&q=80')] opacity-5 bg-cover bg-center"></div>
+            <div class="relative z-10 p-8 sm:p-12 lg:p-16 flex flex-col lg:flex-row gap-12 items-center">
+                
+                <div class="w-full lg:w-1/2 text-white space-y-4">
+                    <h2 class="text-3xl sm:text-4xl font-bold font-title tracking-tight">เริ่มต้นการเรียนรู้ของคุณวันนี้</h2>
+                    <p class="text-slate-300 font-light leading-relaxed">
+                        ไม่ว่าคุณจะสนใจการสร้างหุ่นยนต์อัจฉริยะ หรือการฝึกฝนภาษาอังกฤษเพื่อก้าวสู่ระดับสากล เราพร้อมต้อนรับและให้คำแนะนำที่เหมาะกับคุณ กรอกข้อมูลด้านข้างเพื่อรับสิทธิ์ทดลองเรียนฟรี!
+                    </p>
+                    <div class="pt-4 space-y-3 text-sm text-slate-300">
+                        <div class="flex items-center gap-3"><i class="fa-solid fa-location-dot text-indigo-400 w-5"></i> The bright Rama 2 , กรุงเทพฯ</div>
+                    </div>
+                </div>
+
+                <div class="w-full lg:w-1/2 bg-white p-6 sm:p-8 rounded-2xl shadow-xl">
+                    <!-- เพื่อความเข้ากันได้กับระบบส่งอีเมล Web3Forms มีการใส่ name เข้าไปในอินพุตทุกตัวแล้ว -->
+                    <form id="reg-form" onsubmit="handleRegister(event)" class="space-y-4">
+                        <div>
+                            <label class="block text-sm font-semibold text-slate-700 mb-1">ชื่อ-นามสกุล</label>
+                            <input type="text" name="name" required class="w-full px-4 py-2.5 rounded-lg border border-slate-200 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none transition-all text-sm" placeholder="สมชาย ใจดี">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold text-slate-700 mb-1">เบอร์โทรศัพท์</label>
+                            <input type="tel" name="phone" required class="w-full px-4 py-2.5 rounded-lg border border-slate-200 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none transition-all text-sm" placeholder="081-234-5678">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold text-slate-700 mb-1">คอร์สที่สนใจ</label>
+                            <select name="course" class="w-full px-4 py-2.5 rounded-lg border border-slate-200 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none transition-all text-sm text-slate-700">
+                                <optgroup label="ClickRobot Courses">
+                                    <option value="Lego Duplo Matata (อนุบาล 1)">Lego Duplo Matata (อนุบาล 1)</option>
+                                    <option value="Lego Essential (อนุบาล 2-3)">Lego Essential (อนุบาล 2-3)</option>
+                                    <option value="Lego Spike Prime (ประถมศึกษา 1-3)">Lego Spike Prime (ประถมศึกษา 1-3)</option>
+                                    <option value="Python with Spike Prime (9 ปีขึ้นไป)">Python with Spike Prime (9 ปีขึ้นไป)</option>
+                                    <option value="VEX IQ Robotics (9 ปีขึ้นไป)">VEX IQ Robotics (9 ปีขึ้นไป)</option>
+                                </optgroup>
+                                <optgroup label="English Corner Courses">
+                                    <option value="Creative English (ภาษาอังกฤษสนทนา)">Creative English (ภาษาอังกฤษสนทนา)</option>
+                                    <option value="Phonics Master (โฟนิกส์ออกเสียงสะกดคำ)">Phonics Master (โฟนิกส์ออกเสียงสะกดคำ)</option>
+                                    <option value="Smart Math (คณิตศาสตร์ภาษาอังกฤษ)">Smart Math (คณิตศาสตร์ภาษาอังกฤษ)</option>
+                                    <option value="Creative Art (ศิลปะบูรณาการภาษาอังกฤษ)">Creative Art (ศิลปะบูรณาการภาษาอังกฤษ)</option>
+                                </optgroup>
+                                <option value="All-in-One (รับสิทธิ์เรียนทั้งสองคอร์สควบคู่กัน)">All-in-One (รับสิทธิ์เรียนทั้งสองคอร์สควบคู่กัน)</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-3 rounded-lg shadow-md transition-all mt-2">
+                            ส่งข้อมูลลงทะเบียน
+                        </button>
+                    </form>
+                    <div id="form-success" class="hidden text-center text-emerald-600 font-semibold p-4 bg-emerald-50 rounded-xl mt-4">
+                        <i class="fa-solid fa-circle-check"></i> ลงทะเบียนเสร็จสมบูรณ์! ข้อมูลการสมัครเรียนส่งเข้าอีเมลของเจ้าหน้าที่เรียบร้อยแล้ว
+                    </div>
+                    <div id="form-error" class="hidden text-center text-red-600 font-semibold p-4 bg-red-50 rounded-xl mt-4">
+                        <!-- กล่องแจ้งเตือนในกรณีที่เชื่อมต่อส่งอีเมลไม่สำเร็จ -->
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 py-8 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm">
+            <p>&copy; 2026 ClickRobot & English Corner. All rights reserved.</p>
+            <div class="flex gap-6">
+                <a href="#" class="hover:text-white"><i class="fa-brands fa-facebook text-lg"></i></a>
+                <a href="#" class="hover:text-white"><i class="fa-brands fa-line text-lg"></i></a>
+                <a href="#" class="hover:text-white"><i class="fa-solid fa-globe text-lg"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript Logic -->
+    <script>
+        // Mobile Menu Toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when clicking a link
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Interactive Quiz Logic
+        function checkAnswer(isCorrect, element) {
+            const resultDiv = document.getElementById('quiz-result');
+            const options = document.getElementById('quiz-options').querySelectorAll('button');
+            
+            // Reset options styles
+            options.forEach(opt => {
+                opt.className = "w-full text-left p-4 rounded-xl border border-slate-200 transition-all font-medium text-slate-700 flex items-center justify-between group";
+                opt.querySelector('i').className = "fa-regular fa-circle text-slate-300";
+            });
+
+            // Apply selected style
+            if (isCorrect) {
+                element.className = "w-full text-left p-4 rounded-xl border-2 border-emerald-500 bg-emerald-50 font-bold text-emerald-800 flex items-center justify-between";
+                element.querySelector('i').className = "fa-solid fa-circle-check text-emerald-500";
+                resultDiv.className = "mt-4 text-center text-sm font-semibold text-emerald-600 block";
+                resultDiv.innerHTML = "<i class='fa-solid fa-thumbs-up'></i> Correct! Autonomous แปลว่า ทำงานได้อย่างอิสระ/อัตโนมัติ ซึ่งเป็นหัวใจของหุ่นยนต์ครับ";
+            } else {
+                element.className = "w-full text-left p-4 rounded-xl border-2 border-orange-500 bg-orange-50 font-bold text-orange-800 flex items-center justify-between";
+                element.querySelector('i').className = "fa-solid fa-circle-xmark text-orange-500";
+                resultDiv.className = "mt-4 text-center text-sm font-semibold text-orange-500 block";
+                resultDiv.innerHTML = "<i class='fa-solid fa-face-frown'></i> ยังไม่ถูกน้า ลองเลือกข้ออื่นดูอีกครั้งครับ!";
+            }
+        }
+
+        // ระบบส่งข้อมูลลงทะเบียนเข้า Email ผ่าน Web3Forms API
+        async function handleRegister(event) {
+            event.preventDefault();
+            const form = event.target;
+            const submitButton = form.querySelector('button[type="submit"]');
+            const errorDiv = document.getElementById('form-error');
+            const successDiv = document.getElementById('form-success');
+            
+            const originalButtonText = submitButton.innerHTML;
+            
+            // 1. ซ่อนกล่องข้อผิดพลาดเดิม (ถ้ามี)
+            errorDiv.classList.add('hidden');
+            
+            // 2. แสดงสถานะกำลังโหลด (Loading State) เพื่อบอกคนกดว่าระบบกำลังทำงาน
+            submitButton.disabled = true;
+            submitButton.innerHTML = '<i class="fa-solid fa-spinner animate-spin"></i> กำลังส่งข้อมูล...';
+
+            const formData = new FormData(form);
+            
+            // ==========================================
+            // ใส่ Access Key ของคุณที่ได้รับจากอีเมลตรงนี้
+            // ==========================================
+            const web3FormsAccessKey = "YOUR_ACCESS_KEY_HERE"; 
+            
+            formData.append("access_key", web3FormsAccessKey);
+            formData.append("from_name", "ClickRobot & English Corner Website");
+            formData.append("subject", "🔥 มีผู้สนใจลงทะเบียนเรียนใหม่เข้ามา!");
+
+            try {
+                // ส่งข้อมูลยิงไปยัง API หลังบ้านของ Web3Forms แบบไม่โหลดหน้าเว็บใหม่
+                const response = await fetch("https://api.web3forms.com/submit", {
+                    method: "POST",
+                    body: formData
+                });
+                
+                const result = await response.json();
+                
+                if (result.success) {
+                    // ส่งข้อมูลสำเร็จ: แสดงข้อความเรียบร้อยและซ่อนฟอร์ม
+                    form.classList.add('hidden');
+                    successDiv.classList.remove('hidden');
+                } else {
+                    // เกิดข้อผิดพลาดจากทาง API
+                    throw new Error(result.message || "เกิดข้อผิดพลาดในการส่งข้อมูล");
+                }
+                
+            } catch (error) {
+                // แสดงผลความผิดพลาดในดีไซน์ UI ที่สวยงาม (ไม่ใช้ alert())
+                errorDiv.innerHTML = `<i class="fa-solid fa-triangle-exclamation"></i> ไม่สามารถส่งข้อมูลได้: ${error.message} <br><small>กรุณาตรวจสอบว่าตั้งค่า Access Key ถูกต้องแล้วหรือยังครับ</small>`;
+                errorDiv.classList.remove('hidden');
+                
+                // คืนค่าปุ่มให้สามารถกดส่งใหม่ได้อีกครั้ง
+                submitButton.disabled = false;
+                submitButton.innerHTML = originalButtonText;
+            }
+        }
+    </script>
+</body>
+</html>
